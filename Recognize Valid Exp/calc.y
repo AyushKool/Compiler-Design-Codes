@@ -19,11 +19,10 @@
 
 %start S
 
-
 %%
 S : E '\n' {printf("Expression is valid\n\n>>Enter the expression\n");}
   | S E '\n' {printf("Expression is valid\n\n>>Enter the expression\n");}
-	;
+  ;
 
 E : E'+'E
    |E'-'E
