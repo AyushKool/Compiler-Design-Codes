@@ -8,7 +8,6 @@
 .
 \n
 %%
-
 int yywrap(){}
 
 int main()

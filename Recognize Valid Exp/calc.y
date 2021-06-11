@@ -14,9 +14,6 @@
 %token<n> NUMBER 
 %token<id> ID
 
-%left '+' '-'
-%left '*' '/'
-
 %start S
 
 %%

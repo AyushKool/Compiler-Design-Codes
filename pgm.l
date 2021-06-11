@@ -10,7 +10,7 @@
 
 int main()
 {
-    yyin = fopen("input.txt", "r");
+    yyin = fopen("input.txt", "r");//create it ur self
     yyout = fopen("output.txt", "w");
     yylex();
     return 0;

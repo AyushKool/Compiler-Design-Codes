@@ -18,13 +18,12 @@
 <B>0 BEGIN INITIAL;
 <B>[^01\n] BEGIN DEAD;
 <B>\n BEGIN INITIAL; {printf("Accepted\n");} 
-  
+
 <C>1 BEGIN B;
 <C>0 BEGIN A;
 <C>[^01\n] BEGIN DEAD;
 <C>\n BEGIN INITIAL; {printf("Not Accepted\n");} 
-  
-  
+
 <DEAD>[^\n] BEGIN DEAD;
 <DEAD>\n BEGIN INITIAL; {printf("Invalid\n");} 
 %%
@@ -32,6 +31,7 @@
 
 int main()
 {
+	//odd 0 and even 1
 	printf("Enter String:\n");
 	yylex();
 	return 0;
