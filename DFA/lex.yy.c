@@ -1825,7 +1825,7 @@ void yyfree (void * ptr )
 int yywrap(){}
 int main()
 {
-	yyin = fopen("input.txt", "r");
-	yyout = fopen("output.txt", "w");
+	// yyin = fopen("input.txt", "r");
+	// yyout = fopen("output.txt", "w");
 	yylex();
 }

@@ -4,6 +4,7 @@
 	#include <stdio.h>     /* C declarations used in actions */
 	#include <stdlib.h>
 	#include <ctype.h>
+	extern FILE* yyin, *yyout;
 %}
 
 %union {
@@ -36,7 +37,12 @@ E : NUM        	        { $$ = $1; }
   ;
 %%
 
-int main () {
+int yywrap(){return 1;}
+
+int main()
+{
+	yyin = fopen("input.txt", "r");
+	yyout = fopen("output.txt", "w");
 	return yyparse();
 }
 
